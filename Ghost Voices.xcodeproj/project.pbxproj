@@ -10,6 +10,7 @@
 		AE8D1E9B1C1B0EF0003E180E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8D1E9A1C1B0EF0003E180E /* AppDelegate.swift */; };
 		AE8D1E9D1C1B0EF0003E180E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE8D1E9C1C1B0EF0003E180E /* Assets.xcassets */; };
 		AE8D1EA01C1B0EF0003E180E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE8D1E9E1C1B0EF0003E180E /* MainMenu.xib */; };
+		AE8D1EA91C1B110A003E180E /* Speak.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8D1EA81C1B110A003E180E /* Speak.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +19,9 @@
 		AE8D1E9C1C1B0EF0003E180E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE8D1E9F1C1B0EF0003E180E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		AE8D1EA11C1B0EF0003E180E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE8D1EA71C1B110A003E180E /* Ghost Voices-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ghost Voices-Bridging-Header.h"; sourceTree = "<group>"; };
+		AE8D1EA81C1B110A003E180E /* Speak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Speak.m; sourceTree = "<group>"; };
+		AE8D1EAA1C1B1137003E180E /* Speak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Speak.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,9 @@
 				AE8D1E9C1C1B0EF0003E180E /* Assets.xcassets */,
 				AE8D1E9E1C1B0EF0003E180E /* MainMenu.xib */,
 				AE8D1EA11C1B0EF0003E180E /* Info.plist */,
+				AE8D1EAA1C1B1137003E180E /* Speak.h */,
+				AE8D1EA81C1B110A003E180E /* Speak.m */,
+				AE8D1EA71C1B110A003E180E /* Ghost Voices-Bridging-Header.h */,
 			);
 			path = "Ghost Voices";
 			sourceTree = "<group>";
@@ -128,6 +135,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE8D1EA91C1B110A003E180E /* Speak.m in Sources */,
 				AE8D1E9B1C1B0EF0003E180E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,11 +238,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Ghost Voices/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yannickweiss.Ghost-Voices";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Ghost Voices/Ghost Voices-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -242,11 +253,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Ghost Voices/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yannickweiss.Ghost-Voices";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Ghost Voices/Ghost Voices-Bridging-Header.h";
 			};
 			name = Release;
 		};
