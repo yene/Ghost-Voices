@@ -19,6 +19,11 @@
 	// TODO: use a ghostly voice
 	NewSpeechChannel(NULL, &fCurSpeechChannel);
 	
+	SetSpeechProperty(fCurSpeechChannel, kSpeechVolumeProperty, (__bridge CFTypeRef)(@(0.1)));
+	
+	SetSpeechProperty(fCurSpeechChannel, kSpeechOutputToAudioDeviceProperty, (__bridge CFTypeRef)(@(0))); // takes AudioDeviceID
+	
+	
 	theErr = SpeakCFString(fCurSpeechChannel, (__bridge CFStringRef)text, NULL);
 	if (noErr != theErr) {
 		NSString *fErrorFormatString = NSLocalizedString(@"Error #%d (0x%0X) returned.", @"Error #%d (0x%0X) returned.");
